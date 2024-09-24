@@ -66,7 +66,9 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        $comments = $article->comments()-simplePaginate(5);
+
+        return view('suscriber.articles.show', compact('article','comments'));
     }
 
     /**
@@ -74,15 +76,41 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        //Obtener Categorias Publicas
+        $categories = Category::select(['id','name'])
+                        ->where('status','1')
+                        ->get();
+        
+        return view('admin.articles.edit', compact('categories','article'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Article $article)
+    public function update(ArticleRequest $request, Article $article)
     {
-        //
+        //Si el usuario quiere subir una nueva imagen
+        if($request->hasFile('image')){
+            //Eliminar imagen anterior
+            File::delete(public_path('storage/' . $article->image));
+            //Asigna imagen nueva
+            $article['image'] = $request->file['image']->store('articles');
+        }
+
+        //Actualizar datos
+        $article->update([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'introduction' => $request->introduction,
+            'body' => $request->body,
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->category_id,   
+            'status' => $request->status, 
+        ]);
+
+        //Redireccionar al index
+        return redirect()->action([ArticleController::class, 'index'])
+        ->with('success-update', 'Articulo modificado.');
     }
 
     /**
@@ -90,6 +118,16 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        //Eliminar imagen del Articulo
+        if($article->image){
+            File::delete(public_path('storage/' . $article->image));
+        }
+
+        //Eliminar el Articulo
+        $article->delete();
+
+        //Redireccionar al index
+        return redirect()->action([ArticleController::class, 'index'], compact('article'))
+        ->with('success-delete', 'Articulo eliminado.');
     }
 }
