@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\ArticleRequest;
 
 
@@ -111,7 +112,7 @@ class ArticleController extends Controller
         ]);
 
         //Redireccionar al index
-        return redirect()->action([ArticleController::class, 'index'])
+        return redirect()->action([ArticleController::class, 'index'], compact('article'))
         ->with('success-update', 'Articulo modificado.');
     }
 
