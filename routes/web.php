@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,7 +31,7 @@ Route::resource('comments', CommentController::class)
 //Perfiles
 Route::resource('profiles', ProfileController::class)
 ->only('edit', 'update')
-->name('profiles');
+->names('profiles');
 
 //Ver Articulos                
 Route::get('article/{article}', [ArticleController::class, 'show'])->name('articles.show');
