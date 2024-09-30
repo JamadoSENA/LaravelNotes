@@ -30,7 +30,7 @@ Route::resource('comments', CommentController::class)
 
 //Perfiles
 Route::resource('profiles', ProfileController::class)
-->only('edit', 'update')
+->only('show', 'edit', 'update')
 ->names('profiles');
 
 //Ver Articulos                

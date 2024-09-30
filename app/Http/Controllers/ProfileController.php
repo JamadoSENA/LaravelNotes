@@ -24,13 +24,11 @@ class ProfileController extends Controller
         return view('subscriber.profiles.show', compact('profile', 'articles'));
     }
 
-    // Método para redirigir al formulario de edición
     public function edit(Profile $profile)
     {
         return view('subscriber.profiles.edit', compact('profile'));
     }
 
-    // Método para actualizar el perfil
     public function update(ProfileRequest $request, Profile $profile)
     {
         $user = Auth::user();
@@ -63,7 +61,6 @@ class ProfileController extends Controller
         $user->save();
         $profile->save();
 
-        // Redirigir a la página de edición del perfil con un mensaje de éxito
         return redirect()->route('profiles.edit', $profile->id)->with('status', 'Perfil actualizado correctamente.');
     }
 }
