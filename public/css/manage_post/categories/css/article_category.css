@@ -1,0 +1,245 @@
+/* Aquí comienza el encabezado de categorias*/
+.category-container {
+    display: flex;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.category-container ul {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    border-bottom: 2px solid #C5C5C5 !important;
+}
+
+.category-container ul li {
+    margin: 0 3.5%;
+}
+
+.category-container a {
+    color: #a09b9b;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 0.625rem;
+}
+
+.category-container a:hover {
+    color: #2B4F95;
+}
+
+.nav-item {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #031b4e;
+    margin-bottom: -2px;
+}
+
+.nav-item.active>a {
+    color: #031b4e !important;
+}
+
+
+/* Cards de articulos y categoria */
+
+
+.article-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+.article {
+    flex: 0 0 23%;
+    height: 23.3em;
+    background: #FFFF;
+    box-shadow: 1px 1px 15px -6px rgb(133 130 130);
+    margin-left: 1.5%;
+    margin-bottom: 3%;
+    border-radius: 3px;
+}
+
+.article img {
+    width: 100%;
+    border-radius: 3px;
+    height: 42%;
+    margin-bottom: 10px;
+}
+
+.article .card-body {
+    padding: 1rem;
+}
+
+.article .card-body .title {
+    height: 50px;
+    max-height: 12.5em;
+    line-height: 1.4;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2b4f95;
+    margin-bottom: 15px;
+}
+
+.article .card-body .introduction {
+    font-size: 1em;
+    width: 100%;
+    line-height: 1.6;
+    text-align: justify;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.article .card-body .title:hover {
+    text-decoration: underline !important;
+}
+
+/* Listar todas las categorias  */
+
+.article.category {
+   height: 13.2em;
+}
+
+.article.category .img {
+    height: 60%;
+}
+.title.category {
+    text-align: center;
+}
+
+
+
+
+/* Aquí termina la sesión de artículos y categorias */
+
+
+/* 1440 * 900 */
+
+@media (min-width: 1400px) and (max-width: 1440px) {
+
+    .category-container {
+        width: 82%;
+    }
+
+    .category-container ul>li {
+        margin: 0 3%;
+    }
+
+    .article-container {
+        width: 82%;
+    }
+
+    .article {
+        flex: 0 0 30%;
+        height: 27em;
+        margin-left: 2.5%;
+    }
+
+    .article img {
+        height: 50%;
+    }
+
+    .article .card-body .title {
+        font-size: 1.1em;
+    }
+
+    .article .card-body .introduction {
+        width: 100%;
+        font-size: 0.93em;
+    }
+
+  
+}
+
+/* 1366 * 768 */
+
+@media (min-width: 1366px) and (max-width: 1399px) {
+
+    .category-container {
+        width: 81%;
+    }
+
+    .category-container ul>li {
+        margin: 0 2.5%;
+    }
+
+    .article-container {
+        width: 76%;
+    }
+
+    .article {
+        flex: 0 0 29%;
+        height: 26em;
+        margin-left: 2.5%;
+    }
+
+    .article img {
+        height: 50%;
+    }
+
+    .article .card-body .title {
+        font-size: 1em;
+    }
+
+    .article .card-body .introduction {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+}
+
+/* 1280px * 800 */
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+
+    .category-container {
+          width: 78%;
+    }
+
+    .category-container ul li {
+        margin: 0 2.7%;
+    }
+
+    .category-container a {
+        font-size: 1.1em;
+    }
+    
+    .article-container {
+        width: 70%;
+    }
+
+    .article {
+        flex: 0 0 30%;
+        margin-left: 2.5%;
+    }
+}
+
+/* 1024px * 600 */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .category-container {
+        width: 80%;
+    }
+
+    .category-container a {
+        font-size: 1.2em;
+    }
+
+    .category-container ul li {
+        margin: 0 1.8%
+    }
+
+    .article {
+        flex: 0 0 30%;
+    }
+
+    .article-container {
+        width: 82%;
+    }
+
+}
+

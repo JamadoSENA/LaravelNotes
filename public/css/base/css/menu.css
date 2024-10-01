@@ -1,0 +1,100 @@
+/* Cabecera - Siempre es fija */
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 70px;
+    margin-top: 0;
+    margin-bottom: 1%;
+    background-color: #FFF;
+    border-bottom: 1px solid #dfdcdc;
+}
+
+/* Linea de separación */
+
+hr {
+    width: 85%;
+    margin: 8px auto;
+    border-top: 2px solid #dee2e6;
+}
+
+.menu {
+    display: flex;
+    margin: 0% 14%;
+    flex-direction: row-reverse;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+    width: 20%;
+    margin-top: 1px;
+}
+
+.logo a {
+    color: #FFF;
+    font-size: 30px;
+}
+
+.nav {
+    padding: 0.6em;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav ul li {
+    margin-left: 0.5em;
+}
+
+.nav,
+.login,
+.create{
+    color: #FFF;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    padding: 1em;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    background-color: #1d448e;
+}
+
+.login{
+    margin-right: 3px !important;
+}
+
+.nav .profile {
+    display: flex;
+}
+
+.nav li span {
+    display: block;
+    margin-top: 6px;
+    color: black;
+}
+
+.name-user{
+    font-size: 1em;
+    font-weight: 700;
+}
+
+/* Aquí termina la cabecera */
+
+/* 1440 x 900 */
+
+@media (max-width: 1440px) {
+    .menu {
+        margin: 0% 5%;
+    }
+
+    .login {
+        margin-right: 8px;
+    }
+
+}
+

@@ -1,0 +1,102 @@
+.content-login{
+    width: 95%;
+    padding: 26px;
+}
+
+.form{
+    background:#FFF;
+    margin-top: 140px;
+    padding: 3px;
+}
+
+h2{
+    text-align: center;
+    color: #343A40;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: 15px;
+    width: 100%;
+    padding: 12px 10px;
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    outline: unset;
+}
+
+.content-reset 
+.form-email, 
+.form-password,
+.form-password-confirm{
+    font-size: 15px;
+    width: 90% !important;
+    padding: 12px 10px;
+    margin-left: 10px !important;
+    outline: unset;
+}
+
+.form-email{
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.form-password-confirm{
+    margin-top: 0px !important; 
+    margin-bottom: 20px !important;
+}
+
+.button{
+    border: none;
+    width: 85%;
+    color: white;
+    font-size: 16px;
+    background: #1D448E;
+    padding: 14px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 36px;
+    margin-bottom: 15px;
+}
+
+.button:hover{
+    background: #2979FF;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.link{
+    text-decoration: none;
+    color: #1D448E;
+    font-weight: 500;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.password-reset{
+    display: block;
+    margin: -19px 38px 12px;
+}
+
+.alert-red{
+    color: red;
+}
+
+@media(min-width: 768px)
+{
+    .form{
+        margin: auto;
+        width: 500px;
+        margin-top: 30px;
+        border-radius: 2%;
+    }
+}

@@ -1,0 +1,197 @@
+/* Agregar comentarios */
+
+/* Comentarios */
+
+form{
+    background-color: red;
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-general {
+    display: flex;
+    width: 30%;
+    background: #FFFF;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content .form-general.comments {
+    display: flex;
+    width: 47%;
+    flex-direction: column;
+    margin-bottom: 4%;
+}
+
+
+.form-content .form-general .form-group{
+    margin-top: 40px;
+    margin-bottom: -20px;
+    width: 88%;
+}
+
+.form-content .form-general .form-group #description {
+    display: block;
+    min-width: 100%;
+    min-height: 120px;
+    padding: 20px;
+    resize: none;
+    font-size: 1.2em;
+    outline: unset;
+    margin-top: 20px;
+    border: 1px solid rgb(160, 146, 146);
+    border-radius: 4px;
+}
+
+.form-content .form-general .btn-submit {
+    display: flex;
+    padding: 10px;
+    width: 25%;
+    cursor: pointer;
+    font-size: 1.2em !important;
+    justify-content: center;
+    color: #FFF;
+    background: #031b4e;
+    margin-left: 63% !important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 2px;
+}
+
+
+
+
+/* Visualización de comentarios */
+
+.comments-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.comments-content .comments-body {
+    width: 41%;
+    padding: 10px;
+    background-color: rgba(198, 198, 198, 0.5);
+    border-radius: 5px;
+    color: black;
+    align-self: center;
+}
+
+
+.comments-content .comments-body .comment-head {
+    display: flex;
+    width: 50%;
+    font-weight: bold;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.comments-content hr {
+    border-top: 2px solid #c6ccd1;
+    width: 50%;
+    margin: 10px auto;
+    text-decoration: unset;
+}
+
+.comments-content .comments-body .comment-description {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Estrellas */
+.form-group.rating{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -12px !important;
+    margin-top: 30px !important;
+}
+
+.txt-center {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.rating {
+    width: 90px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+
+.rating > label {
+    float: right;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 1.1em;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(15, 24, 150);
+}
+
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: transparent;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > input.radio-btn:checked ~ label:before,
+.rating > input.radio-btn:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
+
+/* 1440px * 900 */
+
+@media (max-width: 1440px) {
+    .form-content .form-general.comments{
+    width: 60%;
+    }
+
+    .comments-content .comments-body {
+        width: 53%;
+    }
+
+    .comments-content hr {
+        width: 63%;
+    }
+
+}
+
+
+/* 1024px * 600 */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .form-content .form-general.comments {
+        width: 65%;
+    }
+
+    .comments-content .comments-body {
+        width: 57%;
+    }
+
+    .comments-content hr {
+        width: 69%;
+    }
+}

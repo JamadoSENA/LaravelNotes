@@ -1,0 +1,441 @@
+/* Estilos de los formularios de ingresar, registrarse, editar perfil y comentarios*/
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-general {
+    display: flex;
+    width: 30%;
+    background: #FFFF;
+    box-shadow: 0px 1px 4px grey;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content .form-general h2 {
+    font-size: 2.8em;
+    font-weight: lighter;
+    color: #343A40;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.form-content .form-general table {
+    width: 60%;
+    border-spacing: 3 20px;
+    margin: 0px auto;
+}
+
+.form-content .form-general input {
+    width: 100%;
+    padding: 4%;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.form-content .form-general.edit-profile ul {
+    width: 57%;
+    margin-top: 13px;
+}
+
+.form-content .form-general.edit-profile ul li {
+    margin-bottom: 18px;
+}
+
+.form-content .form-general.edit-profile input, a {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+
+
+.form-content .form-general.edit-profile input[type="submit"] {
+    padding: 2%;
+}
+
+#id_categories {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 94px;
+    flex-direction: column;
+    align-content: stretch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid gray;
+}
+
+#id_categories>li {
+    margin-top: -9px;
+    margin-left: 12px;
+}
+
+.form-content .form-general input[type="checkbox"] {
+    position: relative;
+    top: 50%;
+    left: 20%;
+}
+
+.form-content .form-general .change-password {
+    display: block;
+    border: 1px solid gray;
+    color: #1d448e;
+    padding: 4%;
+    width: 100%;
+}
+
+.change-password:hover{
+    color: blue;
+}
+
+
+.form-content .form-general .btn-submit {
+    display: flex;
+    padding: 2%;
+    width: 58%;
+    cursor: pointer;
+    font-size: 1.2em !important;
+    justify-content: center;
+    color: #FFF;
+    background: #1d448e;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 2px;
+}
+
+/* Estilos login */
+
+.form-content .form-general .reset_password {
+    margin-bottom: 12px;
+    margin-top: -6px;
+}
+
+
+.btn-submit.deactive{
+    background:#db2828 !important;
+    margin-top: 30px;
+
+}
+
+.btn-change-password{
+    width: 59%;
+}
+
+.form-field{
+width: 57.5%;
+margin-bottom: 20px;
+}
+
+.text-center{
+    display: flex;
+    width: 38%;
+    height: 8em;
+    margin: 0 auto;
+    margin-top: 60px;
+    background: #FFFF;
+    box-shadow: 0px 1px 4px grey;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-back{
+background: #1d448e;
+width: 30%;
+border-radius: 2px;
+text-align: center;
+padding: 0.8em;
+color: #FFFF;
+}
+
+.text-center h3{
+font-size: 1.5em;
+margin-top: 15px;
+margin-bottom: 5px;
+}
+
+.fields-password{
+    width: 54%;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.fields-password > #id_new_password1{
+    margin-bottom: 15px;
+}
+
+.btn-submit.btn-change{
+    display: inline-block !important;
+    width: 46% !important;
+    padding: 3% !important;
+    margin-left: 10px !important;
+}
+
+.btn-submit.back{
+    display: inline-block !important;
+    text-align:center;
+    width: 46% !important;
+    padding: 3% !important;
+}
+
+.alert-session {
+    text-align: center;
+}
+
+
+.text-reset_password{
+ font-size: 2.5em !important;
+ font-weight: lighter;
+ color: #343A40;
+ margin-top: 15px;
+ margin-bottom: 5px;
+}
+
+.btn-submit.btn-password{
+    width: 100% !important;
+    margin-top: 25px;
+    padding: 3% !important;
+    margin-left: 1px !important
+}
+
+.alert-send{
+    width: 70%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.alert-danger{
+    text-align: left;
+    font-weight: 400 !important;
+    font-size: 1.71428571rem!important;
+}
+
+.alert-deactivate-confirm{
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.non-field-errors {
+    text-align: justify;
+    font-size: 1em;
+    color: #db2828;
+    margin-top: 10px;
+}
+
+
+
+/* Ver perfil y publicaciones */
+
+.description-profile {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    margin: 1% auto;
+    margin-bottom: 2%;
+    background-color: #FFFF;
+}
+
+.description-profile .image-profile {
+    display: flex;
+    width: 15%;
+    height: 10.5em;
+    margin: 1%;
+    margin-left: 2.5%;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.description-profile .image-profile img {
+    width: 100%;
+    border: 5px solid #FFFF;
+}
+
+.body-description-profile {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    margin: 1% 0%;
+    color: #1d448e !important;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.body-description-profile p {
+    margin-bottom: 1.5%;
+}
+
+
+.description-profile .edit-profile-view{
+    margin-top: 20px;
+}
+
+.description-profile .edit-profile-view a{
+    font-size: 1em;
+    padding: 12px;
+    border-radius: 2px;
+    margin-top: 10px;
+    background-color: #1d448e;
+    color: white;
+}
+
+.links-paginate-profile {
+    text-align: center;
+}
+
+
+.links-paginate-profile span{
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+    background-color: #007bff;
+    margin-right: 6px;
+}
+
+.links-paginate-profile a{
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+    background-color: #007bff;
+    margin-right: 6px;
+}
+
+
+.links-paginate-profile a:hover{
+    background-color: gray;
+}
+
+.form-general.reset-password .form-group{
+    width: 65%;
+    margin-top: 20px;
+}
+
+
+
+/* 1400px * 900 */
+@media (max-width: 1440px) {
+
+    .description-profile .image-profile {
+        width: 22%;
+        height: 10em;
+        margin: 1%;
+    }
+
+    .body-description-profile{
+        width: 60%;
+    }
+
+    .form-content .form-general.edit-profile {
+        width: 40%;
+    }
+
+    .form-content .form-general h2 {
+        margin-top: 10px;
+    }
+
+    .form-general.reset-password{
+        width:  38%;
+    }
+
+    .text-center{
+        width: 50%;
+    }
+}
+
+/* 1366px * 768 */
+@media (min-width: 1366px) and (max-width: 1399px) {
+
+    .text-primary {
+        font-size: 1.7em;
+    }
+
+    .form-general {
+        width: 43%;
+    }
+
+    .form-content .form-general h2 {
+        font-size: 3em;
+    }
+
+    .form-content .form-general .btn-submit {
+        width: 59%;
+    }
+
+    .form-content .form-general.edit-profile {
+        width: 44%;
+    }
+
+
+
+}
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+
+    .text-primary {
+        font-size: 1.6em;
+    }
+
+    .form-general {
+        width: 40%;
+    }
+
+    .form-content .form-general.edit-profile input[type="submit"] {
+        width: 58%;
+    }
+
+    .form-content .form-general.edit-profile {
+        width: 40%;
+    }
+
+    .text-reset_password {
+        font-size: 2.5em !important;
+    }
+}
+
+/* 1024px * 600 */
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+
+    .form-general {
+        width: 50%;
+    }
+
+    .text-primary {
+        font-size: 1.5em;
+    }
+
+    .form-content .form-general h2 {
+        font-size: 2.8em;
+    }
+
+    .description-profile .image-profile {
+        width: 25%
+    }
+
+
+    .body-description-profile {
+        width: 54%;
+    }
+
+    .body-description-profile p {
+        margin-bottom: 2.5%;
+    }
+
+    .form-content .form-general.edit-profile {
+        width: 47%;
+    }
+
+    .btn-edit-profile {
+        width: 22%;
+        padding: 10px;
+    }
+
+    .text-reset_password {
+        font-size: 2.3em !important;
+    }
+
+   .text-center{
+        width: 57%;
+    }
+}

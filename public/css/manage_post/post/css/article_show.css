@@ -1,0 +1,172 @@
+/* Visualizar Post */
+
+.content-post {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.content-post .post-title {
+    font-size: 1.2em;
+    width: 67%;
+    padding: 0.625rem;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 0px;
+}
+
+.content-post .post-introduction {
+    width: 60%;
+    margin: 0.625em auto;
+    text-align: left;
+    font-size: 18px;
+    padding: 0.625em;
+}
+
+.content-post .post-author {
+    display: flex;
+    width: 21%;
+    margin-left: 20%;
+    font-weight: bold;
+}
+
+.content-post .post-author span {
+    margin-top: 12px;
+    margin-left: 10px;
+    color: #1d448e;
+}
+
+.content-post .post-author span>a{
+    color: #1d448e;
+}
+
+.content-post .post-author span>a:hover{
+    text-decoration: underline !important;
+    color: #1d448e;
+}
+
+.content-post .post-image {
+    width: 47%;
+    border-radius: 4px;
+    align-self: center;
+    margin: 1.25em auto;
+}
+
+.content-post .post-image .post-image-img {
+    width: 100%;
+}
+
+.content-post .post-body {
+    width: 53%;
+    font-size: 18px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.content-post .post-body p {
+    text-align: left;
+}
+
+.alert-post {
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* 1400px * 900 */
+
+@media (max-width: 1440px) {
+
+    .content-post .post-introduction {
+        width: 74%;
+    }
+
+    .content-post .post-author {
+        display: flex;
+        width: 30%;
+        margin-left: 13.1%;
+    }
+
+    .content-post .post-image {
+        width: 55%;
+    }
+
+    .content-post .post-body {
+        width: 68%;
+    }
+}
+
+/* 1366px * 768 */
+
+@media (min-width: 1366px) and (max-width: 1399px) {
+
+
+    .text-primary {
+        font-size: 1.7em;
+    }
+
+    .content-post .post-body {
+        width: 70%;
+    }
+}
+
+/* 1280px * 800 */
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+
+
+    .text-primary {
+        font-size: 1.7em;
+    }
+
+    .content-post .post-author {
+        margin-left: 10.1%;
+    }
+
+    .content-post .post-introduction {
+        width: 80%;
+    }
+
+    .content-post .post-image {
+        width: 58%;
+    }
+}
+
+/* 1024px * 600 */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .content-post .post-author {
+        margin-left: 10.1%;
+    }
+
+    .content-post .post-introduction {
+        width: 80%;
+    }
+
+    .content-post .post-title {
+        font-size: 1em !important;
+        width: 74%;
+    }
+
+    .content-post .post-image {
+        width: 57%;
+    }
+
+    .content-post .post-body {
+        width: 74%;
+    }
+
+
+    hr {
+        width: 95%;
+    }
+
+    .text-primary {
+        font-size: 1.5em;
+    }
+}
+
+
